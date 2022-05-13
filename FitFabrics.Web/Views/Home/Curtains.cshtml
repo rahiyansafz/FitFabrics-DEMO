@@ -20,13 +20,16 @@
         <img style="object-fit:cover; max-height:400px" src="~/@Model.ImageUrl" class="img-fluid m-2" alt="Cover Image"> <br />
         <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageOne" class="img-fluid m-2" alt="Cover Image">
         <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageTwo" class="img-fluid m-2" alt="Cover Image">
-        <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageThree" class="img-fluid m-2" alt="Cover Image">
+        <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageThree" class="img-fluid m-2" alt="Cover Image"> <br />
+
+        <button class="btn btn-primary shadow-none m-2" onclick="copyUrl()"><i class="bi bi-clipboard"></i>&ensp;Copy to Clipboard</button>
+        <button class="btn btn-primary shadow-none m-2" onclick="share_messenger()"><i class="bi bi-messenger"></i>&ensp;Share on Messager</button>
+        <button class="btn btn-primary shadow-none m-2" onclick="share_whatsapp()"><i class="bi bi-whatsapp"></i>&ensp;Share on Whatsapp</button>
 
         <p class="lead">@Model.Description</p>
         <a class="btn btn-success m-2 shadow-none" asp-controller="Home" asp-action="Index">
             <i class="bi bi-arrow-left"></i> Back To List
         </a>
-        <button class="btn btn-primary shadow-none" onclick="copyUrl()"><i class="bi bi-clipboard"></i>&ensp;Copy to Clipboard</button>
     </div>
 </div>
 
@@ -36,13 +39,19 @@
         let pageUrl = document.location.href;
         //console.log("Current Page URL is: ", pageUrl);
     }
-
     init();
-
     function copyUrl(){
         var copyUrl = document.location.href;
         navigator.clipboard.writeText(copyUrl);
         //console.log("Copied the text: " + copyUrl);
+    }
+
+    function share_messenger(){
+         window.open('fb-messenger://share?link=' + encodeURIComponent(window.location.href) + '&app_id=' + encodeURIComponent('450319712953306'));
+    }
+
+    function share_whatsapp(){
+        window.open('whatsapp://send?text=window.location.href')
     }
 </script>
 }
