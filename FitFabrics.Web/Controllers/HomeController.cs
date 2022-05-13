@@ -33,7 +33,7 @@ namespace FitFabrics.Web.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult DetailCurtain(int? id)
+        public IActionResult Curtains(int? id)
         {
             if (id is not null)
             {
@@ -46,7 +46,7 @@ namespace FitFabrics.Web.Controllers
             }
         }
 
-        public IActionResult DetailSofaCover(int? id)
+        public IActionResult SofaCovers(int? id)
         {
             SofaCover sofaCover = GetSofaCovers().FirstOrDefault(c => c.Id == id)!;
             return View(sofaCover);
@@ -173,10 +173,10 @@ namespace FitFabrics.Web.Controllers
             sofaCovers.Add(
                     new SofaCover
                     {
-                        Name = "Sheer",
+                        Name = "Cover One",
                         Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
                         ImageUrl = "Images/SofaCover/s1.jpg",
-                        Id = 9,
+                        Id = 1,
                         ImageOne = "Images/SofaCover/s2.jpg",
                         ImageTwo = "Images/SofaCover/s3.jpg",
                         ImageThree = "Images/SofaCover/s4.jpg",
@@ -186,10 +186,10 @@ namespace FitFabrics.Web.Controllers
             sofaCovers.Add(
         new SofaCover
         {
-            Name = "Sheer",
+            Name = "Cover Two",
             Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
             ImageUrl = "Images/SofaCover/s9.jpg",
-            Id = 9,
+            Id = 2,
             ImageOne = "Images/SofaCover/s4.jpg",
             ImageTwo = "Images/SofaCover/s5.jpg",
             ImageThree = "Images/SofaCover/s6.jpg",
@@ -199,10 +199,10 @@ namespace FitFabrics.Web.Controllers
             sofaCovers.Add(
         new SofaCover
         {
-            Name = "Sheer",
+            Name = "Cover Three",
             Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
             ImageUrl = "Images/SofaCover/s8.jpg",
-            Id = 9,
+            Id = 3,
             ImageOne = "Images/SofaCover/s9.jpg",
             ImageTwo = "Images/SofaCover/s4.jpg",
             ImageThree = "Images/SofaCover/s6.jpg",
@@ -212,10 +212,10 @@ namespace FitFabrics.Web.Controllers
             sofaCovers.Add(
         new SofaCover
         {
-            Name = "Sheer",
+            Name = "Cover Four",
             Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
             ImageUrl = "Images/SofaCover/s9.jpg",
-            Id = 9,
+            Id = 4,
             ImageOne = "Images/SofaCover/s4.jpg",
             ImageTwo = "Images/SofaCover/s3.jpg",
             ImageThree = "Images/SofaCover/s2.jpg",
