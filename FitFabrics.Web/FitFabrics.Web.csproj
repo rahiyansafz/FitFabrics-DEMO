@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\Curtains\1.jpg" />
+    <None Include="wwwroot\Images\Curtains\10.jpg" />
+    <None Include="wwwroot\Images\Curtains\11.jpg" />
+    <None Include="wwwroot\Images\Curtains\12.jpg" />
+    <None Include="wwwroot\Images\Curtains\13.jpg" />
+    <None Include="wwwroot\Images\Curtains\14.jpg" />
+    <None Include="wwwroot\Images\Curtains\15.jpg" />
+    <None Include="wwwroot\Images\Curtains\16.jpg" />
+    <None Include="wwwroot\Images\Curtains\17.jpg" />
+    <None Include="wwwroot\Images\Curtains\2.jpg" />
+    <None Include="wwwroot\Images\Curtains\3.jpg" />
+    <None Include="wwwroot\Images\Curtains\4.jpg" />
+    <None Include="wwwroot\Images\Curtains\5.jpg" />
+    <None Include="wwwroot\Images\Curtains\6.jpg" />
+    <None Include="wwwroot\Images\Curtains\7.jpg" />
+    <None Include="wwwroot\Images\Curtains\8.jpg" />
+    <None Include="wwwroot\Images\Curtains\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+</Project>

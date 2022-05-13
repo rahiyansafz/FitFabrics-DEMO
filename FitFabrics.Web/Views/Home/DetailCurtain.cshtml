@@ -1,0 +1,48 @@
+﻿@model Curtain
+
+@{
+    ViewData["Title"] = "DetailCurtain";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-dark">Curtain Details</h2>
+        </div>
+        <hr />
+    </div>
+
+    <div class="py-3 px-4 border border-1 border-gray">
+
+        <h1>@Model.Name</h1>
+
+        @*<img style="object-fit:cover; max-height:400px; border: none" src="~/@Model.ImageUrl" class="img-thumbnail" alt="...">*@
+        <img style="object-fit:cover; max-height:400px" src="~/@Model.ImageUrl" class="img-fluid m-2" alt="Cover Image"> <br />
+        <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageOne" class="img-fluid m-2" alt="Cover Image">
+        <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageTwo" class="img-fluid m-2" alt="Cover Image">
+        <img style="object-fit:cover; max-height:400px;" src="~/@Model.ImageThree" class="img-fluid m-2" alt="Cover Image">
+
+        <p class="lead">@Model.Description</p>
+        <a class="btn btn-success m-2 shadow-none" asp-controller="Home" asp-action="Index">
+            Back To List
+        </a>
+        <button class="btn btn-primary shadow-none" onclick="copyUrl()"><i class="bi bi-clipboard"></i>&ensp;Copy to Clipboard</button>
+    </div>
+</div>
+
+@section scripts {
+<script type="text/javascript">
+    function init(){
+        let pageUrl = document.location.href;
+        console.log("Current Page URL is: ", pageUrl);
+    }
+
+    init();
+
+    function copyUrl(){
+        var copyUrl = document.location.href;
+        navigator.clipboard.writeText(copyUrl);
+        console.log("Copied the text: " + copyUrl);
+    }
+</script>
+}
