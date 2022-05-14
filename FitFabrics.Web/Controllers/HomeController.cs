@@ -18,6 +18,7 @@ namespace FitFabrics.Web.Controllers
             ProductViewModel products = new();
             products.Curtains = GetCurtains();
             products.SofaCovers = GetSofaCovers();
+            products.Eyelets = GetEyelets();
 
             return View(products);
         }
@@ -50,6 +51,12 @@ namespace FitFabrics.Web.Controllers
         {
             SofaCover sofaCover = GetSofaCovers().FirstOrDefault(c => c.Id == id)!;
             return View(sofaCover);
+        }
+
+        public IActionResult Eyelets(int? id)
+        {
+            Eyelet eyelet = GetEyelets().FirstOrDefault(c => c.Id == id)!;
+            return View(eyelet);
         }
 
         private List<Curtain> GetCurtains()
@@ -223,6 +230,65 @@ namespace FitFabrics.Web.Controllers
     );
 
             return sofaCovers;
+        }
+
+        private List<Eyelet> GetEyelets()
+        {
+            List<Eyelet> eyelets = new();
+
+            eyelets.Add(
+                    new Eyelet
+                    {
+                        Name = "Eyelet One",
+                        Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
+                        ImageUrl = "Images/Eyelet/e1.jpg",
+                        Id = 1,
+                        ImageOne = "Images/Eyelet/e2.jpg",
+                        ImageTwo = "Images/Eyelet/e3.jpg",
+                        ImageThree = "Images/Eyelet/e4.jpg",
+                    }
+                );
+
+            eyelets.Add(
+        new Eyelet
+        {
+            Name = "Eyelet Two",
+            Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
+            ImageUrl = "Images/Eyelet/e2.jpg",
+            Id = 2,
+            ImageOne = "Images/Eyelet/e2.jpg",
+            ImageTwo = "Images/Eyelet/e3.jpg",
+            ImageThree = "Images/Eyelet/e4.jpg",
+        }
+    );
+
+            eyelets.Add(
+        new Eyelet
+        {
+            Name = "Cover Three",
+            Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
+            ImageUrl = "Images/Eyelet/e3.jpg",
+            Id = 3,
+            ImageOne = "Images/Eyelet/e2.jpg",
+            ImageTwo = "Images/Eyelet/e3.jpg",
+            ImageThree = "Images/Eyelet/e4.jpg",
+        }
+    );
+
+            eyelets.Add(
+        new Eyelet
+        {
+            Name = "Cover Four",
+            Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
+            ImageUrl = "Images/Eyelet/e4.jpg",
+            Id = 4,
+            ImageOne = "Images/Eyelet/e2.jpg",
+            ImageTwo = "Images/Eyelet/e3.jpg",
+            ImageThree = "Images/Eyelet/e4.jpg",
+        }
+    );
+
+            return eyelets;
         }
     }
 }
