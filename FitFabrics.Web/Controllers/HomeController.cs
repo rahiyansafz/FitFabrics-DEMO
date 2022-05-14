@@ -49,14 +49,28 @@ public class HomeController : Controller
 
     public IActionResult SofaCovers(int? id)
     {
-        SofaCover sofaCover = GetSofaCovers().FirstOrDefault(c => c.Id == id)!;
-        return View(sofaCover);
+        if (id is not null)
+        {
+            SofaCover sofaCover = GetSofaCovers().FirstOrDefault(c => c.Id == id)!;
+            return View(sofaCover);
+        }
+        else
+        {
+            return RedirectToAction("Index");
+        }
     }
 
     public IActionResult Eyelets(int? id)
     {
-        Eyelet eyelet = GetEyelets().FirstOrDefault(c => c.Id == id)!;
-        return View(eyelet);
+        if (id is not null)
+        {
+            Eyelet eyelet = GetEyelets().FirstOrDefault(c => c.Id == id)!;
+            return View(eyelet);
+        }
+        else
+        {
+            return RedirectToAction("Index");
+        }
     }
 
     private List<Curtain> GetCurtains()
