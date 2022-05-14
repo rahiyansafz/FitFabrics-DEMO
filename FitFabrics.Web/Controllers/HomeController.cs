@@ -265,7 +265,7 @@ namespace FitFabrics.Web.Controllers
             eyelets.Add(
         new Eyelet
         {
-            Name = "Cover Three",
+            Name = "Eyelet Three",
             Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
             ImageUrl = "Images/Eyelet/e3.jpg",
             Id = 3,
@@ -278,7 +278,7 @@ namespace FitFabrics.Web.Controllers
             eyelets.Add(
         new Eyelet
         {
-            Name = "Cover Four",
+            Name = "Eyelet Four",
             Description = "Panel pair curtains feature two separate curtain panels. This type of curtain is popular in classic and contemporary styles. With a panel pair, you place a curtain on either side of the window. To close these curtains, you’d pull each curtain panel together. Panel pair curtains can be tied back to create a symmetrical look for your window treatment.",
             ImageUrl = "Images/Eyelet/e4.jpg",
             Id = 4,
