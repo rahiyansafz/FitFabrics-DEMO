@@ -33,9 +33,9 @@
             @foreach (var item in Model.Curtains)
             {
                 <section class="col-lg-4 col-md-6 py-3">
-                    <div class="card" style="margin: auto;">
+                    <div class="card" style="margin: auto; border: none">
                         <a asp-action="Curtains" asp-route-id="@item.Id">
-                            <img class="card-img-top" style="max-height: 22rem; object-fit: contain" src="@item.ImageUrl" alt="Card image cap">
+                            <img class="card-img-top" style="max-height: 22rem; object-fit: contain; border-radius: 30px" src="@item.ImageUrl" alt="Card image cap">
                         </a>
                         <div class="card-body">
                             <h5><strong>@item.Name</strong></h5>
@@ -53,9 +53,9 @@
             @foreach (var item in Model.Eyelets)
             {
                 <section class="col-lg-4 col-md-6 py-3">
-                    <div class="card" style="margin: auto;">
+                    <div class="card" style="margin: auto; border: none">
                         <a asp-action="Eyelets" asp-route-id="@item.Id">
-                            <img class="card-img-top" style="max-height: 22rem; object-fit: contain" src="@item.ImageUrl" alt="Card image cap">
+                            <img class="card-img-top" style="max-height: 22rem; object-fit: contain; border-radius: 30px" src="@item.ImageUrl" alt="Card image cap">
                         </a>
                         <div class="card-body">
                             <h5><strong>@item.Name</strong></h5>
@@ -69,23 +69,23 @@
         <br />
         <br />
         <h2 id="scrollspyHeading3">সোফা কাপড়</h2>
-            <div class="row">
-                @foreach (var item in Model.SofaCovers)
-                {
-                    <section class="col-lg-4 col-md-6 py-3">
-                        <div class="card" style="margin: auto;">
-                            <a asp-action="SofaCovers" asp-route-id="@item.Id">
-                                <img class="card-img-top" style="max-height: 22rem; object-fit: contain" src="@item.ImageUrl" alt="Card image cap">
-                            </a>
-                            <div class="card-body">
-                                <h5><strong>@item.Name</strong></h5>
-                                <p>@item.Description</p>
-                            </div>
+        <div class="row">
+            @foreach (var item in Model.SofaCovers)
+            {
+                <section class="col-lg-4 col-md-6 py-3">
+                    <div class="card" style="margin: auto; border: none">
+                        <a asp-action="SofaCovers" asp-route-id="@item.Id">
+                            <img class="card-img-top" style="max-height: 22rem; object-fit: contain; border-radius: 30px" src="@item.ImageUrl" alt="Card image cap">
+                        </a>
+                        <div class="card-body">
+                            <h5><strong>@item.Name</strong></h5>
+                            <p>@item.Description</p>
                         </div>
-                    </section>
-                }
-            </div>
-            <br>
-            <br>
+                    </div>
+                </section>
+            }
+        </div>
+        <br>
+        <br>
     </div>
 </div>
