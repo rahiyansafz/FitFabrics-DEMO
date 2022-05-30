@@ -1,26 +1,80 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
-.cursor-pointer {
-    cursor: pointer;
+footer {
+    background-color: #121212;
 }
 
-.overlay-dark {
-    background-color: rgba(black, 0.9);
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/*
+.validation-summary-errors {
+    background-color: #D9FFB2;
+    border: 1px solid #5CBA30;
+    width: 400px;
+}
+*/
+
+
+.float-left {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 50px;
+    right: 20px;
+    background-color: #fff;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.my-float {
+    font-size: 1.8rem;
+}
+
+.float-right {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 50px;
+    left: 20px;
+    background-color: #fff;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    /*box-shadow: 2px 2px 3px #999;*/
+    z-index: 9999;
+}
+
+
+
+.nav-link.active,
+.show > .nav-link {
+    color: none;
+    background: none;
 }
